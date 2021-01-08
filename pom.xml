@@ -8,6 +8,12 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<name>Devops Sample Application</name>
 	<url>http://maven.apache.org</url>
+	<plugins>
+	<plugin>
+		<groupid>org.sonarsource.scanner.maven</groupid>
+		<artifactid>sonar-maven-plugin</artifactid<version><2.13</version>
+			</plugin>
+		</plugins>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
