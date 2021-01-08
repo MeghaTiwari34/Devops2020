@@ -11,8 +11,8 @@
 	<build>
 	<plugins>
 	<plugin>
-		<groupid>org.sonarsource.scanner.maven</groupid>
-		<artifactid>sonar-maven-plugin</artifactid>
+		<groupId>org.sonarsource.scanner.maven</groupId>
+		<artifactId>sonar-maven-plugin</artifactId>
 		<version>2.13</version>
 	</plugin>
 	</plugins>
