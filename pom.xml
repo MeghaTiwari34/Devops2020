@@ -13,7 +13,7 @@
 	<plugin>
 		<groupid>org.sonarsource.scanner.maven</groupid>
 		<artifactid>sonar-maven-plugin</artifactid>
-		<version><2.13</version>
+		<version>2.13</version>
 	</plugin>
 	</plugins>
 	</build>
