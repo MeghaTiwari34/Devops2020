@@ -182,6 +182,12 @@
 			<artifactId>activation</artifactId>
 			<version>1.1</version>
 		</dependency>
+           <dependency>
+    <groupId>org.sonarsource.scanner.maven</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>3.2</version>
+        </dependency>
+
 	</dependencies>
 	<build>
 		<testResources>
@@ -190,12 +196,5 @@
 			</testResource>
 		</testResources>
 		<finalName>devopssampleapplication</finalName>
-	<plugins>
-	<plugin>
-		<groupId>org.sonarsource.scanner.maven</groupId>
-		<artifactId>sonar-maven-plugin</artifactId>
-		<version>2.13</version>
-	</plugin>
-	</plugins>
 	</build>
 </project>
