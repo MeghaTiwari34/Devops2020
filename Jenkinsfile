@@ -33,6 +33,29 @@ pipeline{
     }
     }
     }
+    stage("Upload to atrifactory")
+    {
+        steps
+        {
+            rtMavenDeployer
+            {
+                id: 'deployer',
+                serverId: '0193913913@artifactory',
+                releaseRepo: 'megha.devopsnagp2020',
+                snapshotRepo: 'megha.devopsnagp2020'
+            }
+            rtMavenRun
+            {
+                pom: 'pom.xml',
+                goals: 'clean install',
+                deployerId: 'deployer'
+            }
+            rtPublishBuildInfo
+            {
+                serverId: '0193913913@artifactory'
+            }
+        }
+    }
     post{
         always{
             bat "echo always"
