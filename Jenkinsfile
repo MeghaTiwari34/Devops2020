@@ -39,7 +39,7 @@ pipeline{
         {
             rtMavenDeployer
             {
-                id: 'deployer',
+                id: 'org.apache.maven.plugins:maven-deploy-plugin:2.8.2',
                 serverId: '0193913913@artifactory',
                 releaseRepo: 'megha.devopsnagp2020',
                 snapshotRepo: 'megha.devopsnagp2020'
@@ -48,7 +48,7 @@ pipeline{
             {
                 pom: 'pom.xml',
                 goals: 'clean install',
-                deployerId: 'deployer'
+                deployerId: 'org.apache.maven.plugins:maven-deploy-plugin:2.8.2'
             }
             rtPublishBuildInfo
             {
