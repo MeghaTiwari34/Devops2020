@@ -38,7 +38,7 @@ pipeline{
         {
             rtMavenDeployer
             {
-                id: 'deployer-unique-id',
+                id: 'deployer',
                 serverId: '0193913913@artifactory',
                 releaseRepo: 'megha.devopsnagp2020',
                 snapshotRepo: 'megha.devopsnagp2020'
@@ -47,7 +47,7 @@ pipeline{
             {
                 pom: 'pom.xml',
                 goals: 'clean install',
-                deployerId: 'deployer-unique-id'
+                deployerId: 'deployer'
             }
             rtPublishBuildInfo
             {
