@@ -32,8 +32,7 @@ pipeline{
     }
     }
     }
-    }
-    stage("Upload to atrifactory")
+    stage('Upload to artifactory')
     {
         steps
         {
