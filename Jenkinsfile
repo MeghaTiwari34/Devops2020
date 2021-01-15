@@ -44,10 +44,22 @@ pipeline {
           )
         }
       }
+        
+        stage("Build Image")
+        {
+            steps
+            {
+                bat "docker build -t myfirstimage:${BUILD_NUMBER} ." 
+            }
+        }
+        stage("Docker Deployment")
+        {
+            steps
+            {
+                bat "docker run --name myfirstcontainer -d -p 9021:8080 myfirstimage:${BUILD_NUMBER}"
+            }
+        }
     }
-
- 
-
 
     post {
 
