@@ -56,7 +56,7 @@ pipeline {
         {
             steps
             {
-                bat "docker run --name myfirstcontainer -d -p 5040:8081 myfirstimage:${BUILD_NUMBER}"
+                bat "docker run --name myfirstcontainer -d -p 9050:8081 myfirstimage:${BUILD_NUMBER}"
             }
         }
     }
