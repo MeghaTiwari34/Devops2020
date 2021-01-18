@@ -32,7 +32,7 @@ pipeline {
             id: "deployer",
             serverId: "0193913913@artifactory",
             releaseRepo: "megha.devopsnagp2020",
-            snapshotRepo: "megha.devopsnagp2020"
+            snapshotRepo: "megha.devopsnagp2020",
             properties: ['uniqueVersion=false']
           )
           rtMavenRun (
