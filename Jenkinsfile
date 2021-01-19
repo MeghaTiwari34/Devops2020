@@ -31,9 +31,8 @@ pipeline {
           rtMavenDeployer (
             id: "deployer",
             serverId: "0193913913@artifactory",
-            releaseRepo: "megha.devopsnagp2020",
-            snapshotRepo: "megha.devopsnagp2020",
-            properties: ['uniqueVersion=false']
+            releaseRepo: "megha.nagp.devops",
+            snapshotRepo: "megha.nagp.devops"
           )
           rtMavenRun (
             pom: "pom.xml",
@@ -57,7 +56,7 @@ pipeline {
         {
             steps
             {
-                bat "docker run --name myfirstcontainer -d -p 9050:8080 myfirstimage:${BUILD_NUMBER}"
+                bat "docker run --name myfirstcontainer -d -p 9050:8081 myfirstimage:${BUILD_NUMBER}"
             }
         }
     }
