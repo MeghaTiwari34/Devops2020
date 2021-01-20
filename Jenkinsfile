@@ -56,7 +56,7 @@ pipeline {
         {
             steps
             {
-                bat "docker run --name myfirstcontainer:${BUILD_NUMBER} -d -p 9050:8080 mysecondimage:${BUILD_NUMBER}"
+                bat "docker run --name mysecondcontainer:${BUILD_NUMBER} -d -p 9050:8080 mysecondimage:${BUILD_NUMBER}"
             }
         }
     }
